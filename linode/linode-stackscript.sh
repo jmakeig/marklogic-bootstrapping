@@ -133,6 +133,4 @@ npm install -g Haraka
 #   SSL (most don't)
 # yum -yq install haproxy
 
-npm install http-proxy
-
 echo "Done"

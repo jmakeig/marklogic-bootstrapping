@@ -65,8 +65,16 @@ rm -rf tar-1.26
 rm tar-1.26.tar.gz
 
 # Configure huge pages
+# This number came out of the MarkLogic error log
 echo "vm.nr_hugepages = 292" >> /etc/sysctl.conf
+
 # TODO: Configure deadline scheduler
+# http://lists.centos.org/pipermail/centos/2009-November/085311.html
+# in /etc/rc.local
+# /dev/xvda is the root device
+# for dev in xvda; do
+#   echo deadline >/sys/block/${dev}/queue/scheduler
+# done
 # TODO: Configure iptables for firewall
 
 # Install git from epel
@@ -123,6 +131,8 @@ npm install -g Haraka
 #   Streaming uploads
 #   Usable configuration
 #   SSL (most don't)
-yum -yq install haproxy
+# yum -yq install haproxy
+
+npm install http-proxy
 
 echo "Done"

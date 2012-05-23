@@ -13,6 +13,17 @@
 #    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #    See the License for the specific language governing permissions and
 #    limitations under the License.
+#
+# Usage:
+# ./ml-install.sh <branch> [<date> Defaults to today]
+#
+# ./ml-install.sh 5.2 20120523
+#
+# Downloads and installs the May 23, 2012 nightly build of the 5.1 branch without stepping on any existing builds
+#
+# ./ml-install.sh 4.2
+# 
+# Downloads and installs tonight's nightly for the 4.2 branch
 
 ML=~/Library/MarkLogic
 DT=~/Library/Application\ Support/MarkLogic/Data

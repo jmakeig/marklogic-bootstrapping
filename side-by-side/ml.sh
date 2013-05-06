@@ -68,6 +68,10 @@ do
     ls ~/Library | grep "^MarkLogic_"
     exit 0
     ;;
+  -f|--forget)
+    sudo pkgutil --forget com.marklogic.server
+    exit 0
+    ;;
 	-h|--help)
 	  echo "(no params): Displays the current symlink configuration."
 	  echo "X.X-X: Creates new symlinks to the version specified."
